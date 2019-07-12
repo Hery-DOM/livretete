@@ -3,7 +3,12 @@
 {% block content %}
     <section class="containerHome">
         {% for id, user in array %}
-            <article class="lastUsers">
+            {% if id%3 == 0 %}
+                {% set color = 'black' %}
+            {% else %}
+                {% set color ='white' %}
+            {% endif %}
+            <article class="lastUsers {{ color }}">
                 <a href="{{ path('profile', {'id':id }) }}">
                     <div class="imgLastUsers">
                         <img src="{{ img[id] }}" alt="profile">
@@ -11,7 +16,7 @@
                     <div class="lastUsersContent">
                         <p><span>Nom complet : </span> {{ user.name }}</p>
                         <p><span>Dit : </span>{{ user.shortname }}</p>
-                        <p><span>Réputation : </span>{{ user.reknown }}</p>
+                        <p><span>Etudes : </span>{{ user.reknown }}</p>
                     </div>
                 </a>
             </article>
