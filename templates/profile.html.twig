@@ -1,0 +1,17 @@
+{% extends "base/base.html.twig" %}
+
+{% block content %}
+    <section class="user">
+        <article class="lastUsers userProfile">
+            <div class="imgLastUsers">
+                <img src="{{ img }}" alt="profile">
+            </div>
+            <div class="lastUsersContent">
+                <p><span>Nom complet : </span> {{ user.name }}</p>
+                <p><span>Dit : </span>{{ user.shortname }}</p>
+                <p><span>Réputation : </span>{{ user.reknown }}</p>
+                <p><span>Biographie : </span>{{ user.bio }}</p>
+            </div>
+        </article>
+    </section>
+{% endblock %}

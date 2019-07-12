@@ -1,0 +1,24 @@
+{% extends "base/base.html.twig" %}
+
+{% block content %}
+    <div class="containerForm">
+        <h2 class="titleContact">Formulaire de contacte</h2>
+        <form action="#" method="post">
+            <input type="radio" name="gender" id="monsieur" value="Monsieur">
+            <label for="monsieur">Monsieur</label>
+            <input type="radio" name="gender" id="madame" value="Madame">
+            <label for="madame">Madame</label>
+            <br>
+
+            <label for="text"></label>
+            <textarea name="text" id="text" cols="30" rows="10"></textarea>
+            <br>
+
+            <input type="submit" value="Valider">
+
+        </form>
+    </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'base/base.html.twig' %}
+
+{% block content %}
+    <section class="containerHome">
+        {% for id, user in last %}
+            <article class="lastUsers">
+                <div class="imgLastUsers">
+                    <img src="{{ lastImg[id] }}" alt="profile">
+                </div>
+                <div class="lastUsersContent">
+                    <p><span>Nom complet : </span> {{ user.name }}</p>
+                    <p><span>Dit : </span>{{ user.shortname }}</p>
+                    <p><span>Réputation : </span>{{ user.reknown }}</p>
+                </div>
+            </article>
+        {% endfor %}
+    </section>
+
+    <h2 class="title">Derniers articles</h2>
+    <section class="containerArticles">
+        <article>
+            <div class="imgArt">
+                <img src="https://www.wedemain.fr/photo/art/grande/28623324-28127445.jpg?v=1544095128" alt="foret">
+            </div>
+            <h3>Article</h3>
+            <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at, commodi ducimus esse fugit illo officiis possimus provident sed temporibus. Alias architecto impedit praesentium quas ratione recusandae temporibus tenetur unde?</span><span>Atque cumque dicta distinctio eaque error eum expedita impedit, incidunt odit pariatur quae quasi sapiente suscipit, ullam ut? Animi commodi cupiditate dolor eligendi maiores odit pariatur placeat quia voluptas voluptatum.</span></p>
+        </article>
+        <article>
+            <div class="imgArt">
+                <img src="https://www.ot-saumur.fr/photo/gal/pic/gal-10720280.jpg?v=1554899595" alt="foret">
+            </div>
+            <h3>Article</h3>
+            <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at, commodi ducimus esse fugit illo officiis possimus provident sed temporibus. Alias architecto impedit praesentium quas ratione recusandae temporibus tenetur unde?</span><span>Atque cumque dicta distinctio eaque error eum expedita impedit, incidunt odit pariatur quae quasi sapiente suscipit, ullam ut? Animi commodi cupiditate dolor eligendi maiores odit pariatur placeat quia voluptas voluptatum.</span></p>
+        </article>
+        <article>
+            <div class="imgArt">
+                <img src="https://medias.liberation.fr/photo/881776-k2-copie.jpg?modified_at=1464947001&width=960" alt="foret">
+            </div>
+            <h3>Article</h3>
+            <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at, commodi ducimus esse fugit illo officiis possimus provident sed temporibus. Alias architecto impedit praesentium quas ratione recusandae temporibus tenetur unde?</span><span>Atque cumque dicta distinctio eaque error eum expedita impedit, incidunt odit pariatur quae quasi sapiente suscipit, ullam ut? Animi commodi cupiditate dolor eligendi maiores odit pariatur placeat quia voluptas voluptatum.</span></p>
+        </article>
+    </section>
+
+{% endblock %}

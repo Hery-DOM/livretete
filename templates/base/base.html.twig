@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LivreTete</title>
+    <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
+</head>
+<body>
+
+    <header>
+        <div class="containerHeader">
+            <a class="logo" href="{{ path('home') }}">
+                <img src="https://img.lovepik.com/element/40082/3808.png_860.png" alt="logo">
+            </a>
+            <div class="slogan">
+                <h2>Ne pas se fier à la couverture</h2>
+            </div>
+        </div>
+    </header>
+    <div class="cln"></div>
+
+    <main>
+        <aside class="sidebar">
+            <section class="contentSidebar">
+                <h2>Pour tourner une page</h2>
+                <nav>
+                    <ul>
+                        <li><a href="{{ path('list') }}">Liste des utilisateurs</a></li>
+                        <li><a href="{{ path('contact') }}">Contactez-nous</a></li>
+                        <div class="divider"></div>
+                            {% for id, user in array %}
+                                <li><a href="{{ path('profile', {'id':id}) }}">{{ user.name }}</a></li>
+                            {% endfor %}
+                    </ul>
+                </nav>
+            </section>
+        </aside>
+
+        <div class="block">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </main>
+
+    <footer>
+        <div class="imgFooter">
+            <img src="https://media.istockphoto.com/vectors/icon-symbol-open-book-logo-vector-isolated-vector-id941097476" alt="livre">
+        </div>
+        <div class="imgFooter">
+            <img src="https://media.istockphoto.com/vectors/icon-symbol-open-book-logo-vector-isolated-vector-id941097476" alt="livre">
+        </div>
+    </footer>
+
+</body>
+</html>
